@@ -1,27 +1,34 @@
 package com.carconnect.carconnect.controller;
 
+import com.carconnect.carconnect.dto.LoginRequest;
+import com.carconnect.carconnect.dto.SignupRequest;
 import com.carconnect.carconnect.entity.User;
 import com.carconnect.carconnect.service.AuthService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/auth")
 public class AuthController {
 
-    AuthService authService;
+    private final AuthService authService;
 
     public AuthController(AuthService authService) {
         this.authService = authService;
     }
 
-//    2. Login
+
+    //    1 Signup method
+    @PostMapping("/signup")
+    public String signup(@RequestBody SignupRequest signupRequestDTO) {
+        return authService.signup(signupRequestDTO);
+    }
+
+
+    //    2. Login
     @PostMapping("/login")
-    public String login(@RequestBody User user){
-        authService.login(user.getEmail(), user.getPassword());
-        return "Login Sucess";
+    public String login(@RequestBody LoginRequest loginRequestDTO) {
+        return authService.login(loginRequestDTO);
+
     }
 
 }
