@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -86,6 +87,18 @@ public class AuthService {
         }
         return "Login Successful";
     }
+
+//    Google oAuth2
+
+    public User createUser(OAuth2User oAuth2User) {
+        User user = new User();
+        user.setName(oAuth2User.getAttribute("name"));
+        user.setEmail(oAuth2User.getAttribute("email"));
+        return user;
+    }
+
+
+
 }
 
 
