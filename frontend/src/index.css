@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --neon: #00FF88;
+  --neon-dim: #00CC6E;
+  --neon-glow: rgba(0, 255, 136, 0.35);
+  --neon-glow-sm: rgba(0, 255, 136, 0.15);
+  --neon-pulse: rgba(0, 255, 136, 0.08);
+  --accent: #00FFCC;
+  --accent-glow: rgba(0, 255, 204, 0.2);
+  --bg: #050A07;
+  --bg-card: rgba(0, 255, 136, 0.03);
+  --bg-input: rgba(0, 255, 136, 0.05);
+  --border: rgba(0, 255, 136, 0.12);
+  --border-focus: rgba(0, 255, 136, 0.6);
+  --text-primary: #E8FFF3;
+  --text-secondary: #7BA890;
+  --text-muted: #3D6B52;
+  --success: #00FF88;
+  --error: #FF4D6D;
+  --google-red: #EA4335;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  /* Prevent horizontal overflow on all screens */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Safe-area support for notched phones */
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
