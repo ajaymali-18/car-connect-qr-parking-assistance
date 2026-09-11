@@ -30,4 +30,9 @@ public class User {
     private String password;
 
 
+    //            Uni Directional
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vehicle_id", referencedColumnName = "vehicleId")
+    Vehicle vehicle;
+
 }

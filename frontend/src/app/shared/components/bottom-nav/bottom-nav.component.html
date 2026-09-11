@@ -1,0 +1,40 @@
+<nav class="fixed bottom-0 left-0 w-full z-50 pb-safe bg-primary-container shadow-[0_-4px_20px_rgba(30,39,73,0.2)]">
+  <div class="max-w-2xl mx-auto flex justify-around items-center h-16 px-space-xs">
+    <a 
+      routerLink="/dashboard" 
+      routerLinkActive="text-secondary-container bg-secondary-container/10 font-bold"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-sm rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5"
+    >
+      <span class="material-symbols-outlined text-[24px]">dashboard</span>
+      <span class="font-label-sm text-label-sm">Dashboard</span>
+    </a>
+
+    <a 
+      routerLink="/vehicles" 
+      routerLinkActive="text-secondary-container bg-secondary-container/10 font-bold"
+      class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-sm rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5"
+    >
+      <span class="material-symbols-outlined text-[24px]">directions_car</span>
+      <span class="font-label-sm text-label-sm">Vehicles</span>
+    </a>
+
+    <a 
+      routerLink="/contact-history" 
+      routerLinkActive="text-secondary-container bg-secondary-container/10 font-bold"
+      class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-sm rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5"
+    >
+      <span class="material-symbols-outlined text-[24px]">chat_bubble</span>
+      <span class="font-label-sm text-label-sm">History</span>
+    </a>
+
+    <a 
+      routerLink="/profile" 
+      routerLinkActive="text-secondary-container bg-secondary-container/10 font-bold"
+      class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-sm rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5"
+    >
+      <span class="material-symbols-outlined text-[24px]">person</span>
+      <span class="font-label-sm text-label-sm">Profile</span>
+    </a>
+  </div>
+</nav>

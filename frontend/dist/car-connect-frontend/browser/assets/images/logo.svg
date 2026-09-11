@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Top Broadcast Wi-Fi Waves -->
+  <!-- Upper Wave -->
+  <path d="M152 74C209 17 303 17 360 74" stroke="#6066FF" stroke-width="36" stroke-linecap="round"/>
+  <!-- Middle Wave -->
+  <path d="M204 126C233 97 279 97 308 126" stroke="#6066FF" stroke-width="36" stroke-linecap="round"/>
+  <!-- Center Dot -->
+  <circle cx="256" cy="172" r="18" fill="#6066FF"/>
+
+  <!-- Connected Car Body -->
+  <!-- Main Body Left Half (Bright Green) -->
+  <path d="M256 240H120C80 240 40 280 20 330C0 380 0 430 40 460H256V240Z" fill="#8CE854"/>
+  <!-- Main Body Right Half (Medium Green) -->
+  <path d="M256 240H320L420 330C460 340 512 370 512 430C512 460 480 460 440 460H256V240Z" fill="#46C673"/>
+
+  <!-- Cabin Windshield / Window (Navy Blue) -->
+  <path d="M256 240H140C110 240 100 270 120 310H256V240Z" fill="#303A69"/>
+  <path d="M256 240H270C310 240 370 290 400 330H256V240Z" fill="#303A69"/>
+
+  <!-- Door Handle -->
+  <rect x="270" y="360" width="60" height="30" rx="15" fill="#38A560"/>
+
+  <!-- Left Wheel (Navy tire with lavender hubcap) -->
+  <circle cx="110" cy="460" r="64" fill="#303A69"/>
+  <circle cx="110" cy="460" r="32" fill="#D6DEFF"/>
+
+  <!-- Right Wheel (Navy tire with lavender hubcap) -->
+  <circle cx="400" cy="460" r="64" fill="#303A69"/>
+  <circle cx="400" cy="460" r="32" fill="#D6DEFF"/>
+</svg>

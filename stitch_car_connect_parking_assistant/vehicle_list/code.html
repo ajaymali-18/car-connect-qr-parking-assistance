@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'primary-fixed': '#dce1ff', 'surface-container-lowest': '#ffffff', 'on-tertiary-container': '#00a472', 'on-surface-variant': '#45464e', 'inverse-primary': '#bcc5ef', 'on-secondary-container': '#690003', 'surface-bright': '#faf8ff', 'inverse-surface': '#2c3041', 'on-tertiary-fixed-variant': '#005236', 'on-secondary': '#ffffff', 'surface-container-low': '#f3f2ff', 'primary-container': '#1e2749', 'on-secondary-fixed': '#410001', 'on-primary': '#ffffff', 'on-primary-fixed-variant': '#3c4569', 'secondary-fixed': '#ffdad5', 'surface': '#faf8ff', 'secondary': '#ae3026', 'outline': '#76767f', 'surface-tint': '#545d82', 'on-primary-container': '#868eb6', 'surface-container-highest': '#dee1f8', 'inverse-on-surface': '#eff0ff', 'secondary-container': '#fc6959', 'outline-variant': '#c6c5cf', 'tertiary-container': '#00301e', 'error': '#ba1a1a', 'primary': '#081234', 'error-container': '#ffdad6', 'surface-variant': '#dee1f8', 'tertiary-fixed-dim': '#4edea3', 'on-surface': '#171b2b', 'on-secondary-fixed-variant': '#8c1712', 'on-tertiary': '#ffffff', 'surface-dim': '#d6d9ef', 'tertiary-fixed': '#6ffbbe', 'background': '#faf8ff', 'on-error-container': '#93000a', 'surface-container': '#ebedff', 'primary-fixed-dim': '#bcc5ef', 'surface-container-high': '#e4e7fe', 'on-primary-fixed': '#10193b', 'on-background': '#171b2b', 'tertiary': '#00190e', 'on-error': '#ffffff', 'on-tertiary-fixed': '#002113', 'secondary-fixed-dim': '#ffb4aa' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-xs': '0.5rem', 'screen-edge-padding': '1.25rem', 'space-xl': '1.5rem', 'touch-target-min': '3rem', 'space-2xs': '0.25rem', 'space-2xl': '2rem', 'card-inner-padding': '1.25rem', 'space-sm': '0.75rem', 'space-lg': '1.25rem', 'space-3xl': '2.5rem', 'space-4xl': '3.5rem', 'space-md': '1rem' }, 'fontFamily': { 'headline-lg': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'code-license-plate': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'headline-xl-mobile': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'] }, 'fontSize': { 'headline-lg': ['24px', { 'lineHeight': '32px', 'letterSpacing': '-0.015em', 'fontWeight': '700' }], 'label-sm': ['11px', { 'lineHeight': '16px', 'letterSpacing': '0.04em', 'fontWeight': '700' }], 'code-license-plate': ['20px', { 'lineHeight': '26px', 'letterSpacing': '0.08em', 'fontWeight': '800' }], 'body-md': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'label-lg': ['15px', { 'lineHeight': '22px', 'letterSpacing': '0.01em', 'fontWeight': '600' }], 'body-sm': ['12px', { 'lineHeight': '18px', 'fontWeight': '400' }], 'label-md': ['13px', { 'lineHeight': '18px', 'letterSpacing': '0.02em', 'fontWeight': '600' }], 'headline-md': ['20px', { 'lineHeight': '28px', 'letterSpacing': '-0.01em', 'fontWeight': '700' }], 'headline-xl': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.02em', 'fontWeight': '800' }], 'headline-xl-mobile': ['28px', { 'lineHeight': '36px', 'letterSpacing': '-0.02em', 'fontWeight': '800' }], 'headline-sm': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }], 'body-lg': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-primary-container text-on-primary shadow-[0_4px_16px_rgba(30,39,73,0.18)]"><div class="h-16 px-screen-edge-padding flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Modern minimalist geometric vector logo for 'Car Connect' parking assistance app. A sleek stylized vehicle silhouette merging smoothly with a subtle signal/connect wave and QR corner brackets. Clean teal (#0D9488) and deep slate (#0F172A) on transparent background.. Design context: - Primary color: #0d9488
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VUtF5MU3Yym5r_fHU8O_MlbnzWMDEMNnj0B-19NQNt3LPx-b3w9RXQo25wmW7vuY7o0huBBaaFbN2mXJVUhOQc3x_d7ihl4XOYPZBEEvboT60WdGHH6cnT0pj7ihBPRf4N0XsLYrXrO_q3CY2tJDRFJFSATyPbnC8yYTTqn1JDm6JMurtGp5L9zqjEqyNysBF8Xgz3xLUaVsyNlnWtwRV19MfD4xAZjBvCUF5J6YDIAvLdwFjiW-jdOTo"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Car Connect</span><span class="font-label-sm text-label-sm text-on-primary-container capitalize leading-none">Vehicles</span></div></div><div class="flex items-center gap-space-xs"><a class="flex items-center justify-center p-space-2xs" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1U5sLFyY2HYCJmX0XV3nhUI5CLhOrV9h_nT6xm3UG7MglR0GFfJpUSX7V5OdWzinpyqjJT7z25-OfafoRyeQJIai9YxJDF9Zjry65mz0wvAX6CBiHcJOUSBoz1yJ_5OSCsLQJtgkdKfefrMWOCRI66hbgTHfUgT3Q-Hkthfe9YIwsypkyU552XuXFhAN4GJwuyngdkBiv-kI8i_EKDzvcN8kk-Jkw2MKCqA5vlQSaFj5Kh1BDGYLYNAsj4k"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 px-screen-edge-padding bg-surface"><div class="flex flex-col w-full space-y-space-xl pb-16">
+<!-- Header Title Section -->
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">My Vehicles</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+        2 vehicles connected to QR relay
+      </p>
+</div>
+<div class="bg-surface-container-low px-3 py-1.5 rounded-full flex items-center gap-1 text-on-primary-container">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+<span class="font-label-sm text-label-sm">Active Relay</span>
+</div>
+</div>
+<!-- Vehicle Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-card-inner-padding shadow-[0_4px_16px_rgba(30,39,73,0.06)] flex flex-col gap-space-md transition-all duration-200 hover:shadow-[0_8px_24px_rgba(30,39,73,0.1)] relative overflow-hidden group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-2 min-w-0 flex-1">
+<!-- Styled IND License Plate Badge -->
+<div class="inline-flex items-stretch bg-surface-bright rounded-lg overflow-hidden shadow-sm self-start">
+<div class="bg-primary-container px-1.5 py-1 flex flex-col items-center justify-between select-none">
+<span class="text-[7px] font-extrabold text-secondary-container leading-none tracking-tighter">IND</span>
+<span class="material-symbols-outlined text-[10px] text-surface-bright">circle</span>
+</div>
+<div class="px-2.5 py-1 bg-surface-container-low flex items-center">
+<span class="font-code-license-plate text-code-license-plate text-primary font-extrabold tracking-wider whitespace-nowrap">MH 12 AB 1234</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface truncate">Honda City ZX</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#1A2542] shadow-sm"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deep Navy Blue</span>
+<span class="text-outline-variant font-bold leading-none">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sedan</span>
+</div>
+</div>
+</div>
+<!-- Scannable QR Mini Preview Thumbnail -->
+<div class="relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-low shadow-sm cursor-pointer group-hover:scale-105 transition-transform duration-200" onclick="openQrModal('Honda City ZX', 'MH 12 AB 1234', '8 scans recorded')">
+<svg class="w-14 h-14 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<!-- Stylized QR Code matrix -->
+<rect fill="currentColor" height="34" rx="4" width="34" x="0" y="0"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="6" y="6"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="11" y="11"></rect>
+<rect fill="currentColor" height="34" rx="4" width="34" x="66" y="0"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="72" y="6"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="77" y="11"></rect>
+<rect fill="currentColor" height="34" rx="4" width="34" x="0" y="66"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="6" y="72"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="11" y="77"></rect>
+<rect fill="currentColor" height="6" rx="2" width="16" x="42" y="8"></rect>
+<rect fill="currentColor" height="14" rx="2" width="8" x="42" y="20"></rect>
+<rect fill="currentColor" height="8" rx="2" width="14" x="16" y="44"></rect>
+<rect fill="#FC6959" height="16" rx="3" width="16" x="42" y="44"></rect>
+<rect fill="currentColor" height="8" rx="2" width="10" x="68" y="44"></rect>
+<rect fill="currentColor" height="14" rx="2" width="8" x="86" y="44"></rect>
+<rect fill="currentColor" height="24" rx="2" width="8" x="42" y="68"></rect>
+<rect fill="currentColor" height="8" rx="2" width="26" x="58" y="76"></rect>
+<rect fill="currentColor" height="6" rx="2" width="12" x="72" y="66"></rect>
+<rect fill="currentColor" height="6" rx="2" width="24" x="68" y="88"></rect>
+</svg>
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-secondary-container mt-1 font-bold">Tap QR</span>
+</div>
+</div>
+<!-- Vehicle Photo Highlight -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A sleek dark navy blue metallic modern Honda City sedan parked neatly in a modern sunlit residential garage. Warm daylight, architectural clean lines, 8k commercial automotive photography, serene and organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdOuyG7hzgRcsgM6g5F69NkMg03SsFxp9Y-ioMLTkdjDGxA4WYYEGz73mMuqFTlq8rsDxdbXFfvOSIbxKJWOeRZh2ft2bFxzFqqN4LkZx34xRBZRHw7wCChxuGkrFyZi51gbNTeSLSmvsxgisCNb6jMxzp3s58bzcnd9Q_W5dVMZnOXfElXQMqMBjt_FLGzaWUXTh-imseZxIAMr0leOgnWkSYEoH07VJhbmGZDwNPFsy01qN-7GljQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-1.5 text-surface-bright">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+<span class="font-label-sm text-label-sm font-semibold">Decal Tag Active</span>
+</div>
+</div>
+<!-- Card Footer / Action Bar -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">8 scans recorded</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Last ping 2h ago</span>
+</div>
+</div>
+<button class="h-10 px-4 rounded-full bg-secondary-container/15 text-secondary-container hover:bg-secondary-container hover:text-on-secondary transition-all duration-200 flex items-center gap-1.5 shadow-sm active:scale-95" onclick="openQrModal('Honda City ZX', 'MH 12 AB 1234', '8 scans recorded')">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span class="font-label-md text-label-md font-bold">View QR</span>
+</button>
+</div>
+</article>
+<!-- Vehicle Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-card-inner-padding shadow-[0_4px_16px_rgba(30,39,73,0.06)] flex flex-col gap-space-md transition-all duration-200 hover:shadow-[0_8px_24px_rgba(30,39,73,0.1)] relative overflow-hidden group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-2 min-w-0 flex-1">
+<!-- Styled IND License Plate Badge -->
+<div class="inline-flex items-stretch bg-surface-bright rounded-lg overflow-hidden shadow-sm self-start">
+<div class="bg-primary-container px-1.5 py-1 flex flex-col items-center justify-between select-none">
+<span class="text-[7px] font-extrabold text-secondary-container leading-none tracking-tighter">IND</span>
+<span class="material-symbols-outlined text-[10px] text-surface-bright">circle</span>
+</div>
+<div class="px-2.5 py-1 bg-surface-container-low flex items-center">
+<span class="font-code-license-plate text-code-license-plate text-primary font-extrabold tracking-wider whitespace-nowrap">KA 05 MN 5678</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface truncate">Hyundai Creta SX</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-bright shadow-sm border border-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Polar White</span>
+<span class="text-outline-variant font-bold leading-none">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compact SUV</span>
+</div>
+</div>
+</div>
+<!-- Scannable QR Mini Preview Thumbnail -->
+<div class="relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-low shadow-sm cursor-pointer group-hover:scale-105 transition-transform duration-200" onclick="openQrModal('Hyundai Creta SX', 'KA 05 MN 5678', '4 scans recorded')">
+<svg class="w-14 h-14 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<!-- Stylized QR Code matrix -->
+<rect fill="currentColor" height="34" rx="4" width="34" x="0" y="0"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="6" y="6"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="11" y="11"></rect>
+<rect fill="currentColor" height="34" rx="4" width="34" x="66" y="0"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="72" y="6"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="77" y="11"></rect>
+<rect fill="currentColor" height="34" rx="4" width="34" x="0" y="66"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="6" y="72"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="11" y="77"></rect>
+<rect fill="currentColor" height="8" rx="2" width="14" x="42" y="8"></rect>
+<rect fill="currentColor" height="8" rx="2" width="8" x="52" y="24"></rect>
+<rect fill="currentColor" height="8" rx="2" width="20" x="12" y="44"></rect>
+<rect fill="#FC6959" height="16" rx="3" width="16" x="42" y="44"></rect>
+<rect fill="currentColor" height="8" rx="2" width="24" x="66" y="44"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="42" y="72"></rect>
+<rect fill="currentColor" height="12" rx="2" width="12" x="66" y="66"></rect>
+<rect fill="currentColor" height="10" rx="2" width="12" x="84" y="82"></rect>
+</svg>
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-secondary-container mt-1 font-bold">Tap QR</span>
+</div>
+</div>
+<!-- Vehicle Photo Highlight -->
+<div class="w-full h-32 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A pristine modern polar white Hyundai Creta SUV vehicle parked outdoor beside modern architectural minimalist building with clean lines and soft golden hour shadows, premium finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc1QpmqDNOtyygmMQt9oy_IKvF_pQ6G2VGbAYNrL13swwD2uSosWHfWgNvkYgYmUTluO3LeoQJSi3kZ3DcslWZ5HDifHKU34NVHcfkoGa3b1qBj9Q4QV-ZqjJ1KXWiPCJ5-c9oZb11kFUGRPA-Y3kwNZb9a5UFQTAZ6CxLxtohetOHwtuJOn9YpKe5eBuYBJR3rHXAniIsDLqFYGRcnctx5oYMLJmBe9w6gux73bS62qOoklc_dv7ypw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-1.5 text-surface-bright">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+<span class="font-label-sm text-label-sm font-semibold">Decal Tag Active</span>
+</div>
+</div>
+<!-- Card Footer / Action Bar -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">4 scans recorded</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Last ping yesterday</span>
+</div>
+</div>
+<button class="h-10 px-4 rounded-full bg-secondary-container/15 text-secondary-container hover:bg-secondary-container hover:text-on-secondary transition-all duration-200 flex items-center gap-1.5 shadow-sm active:scale-95" onclick="openQrModal('Hyundai Creta SX', 'KA 05 MN 5678', '4 scans recorded')">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span class="font-label-md text-label-md font-bold">View QR</span>
+</button>
+</div>
+</article>
+<!-- Quick Tips & Privacy Banner -->
+<div class="bg-surface-container-low rounded-xl p-card-inner-padding flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container text-surface-bright flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Instant Privacy Masking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Your personal phone number is never displayed publicly. Scanning parties route voice and chat through our encrypted proxy.</span>
+</div>
+</div>
+<!-- Floating Action Button (FAB): + Add Vehicle -->
+<div class="fixed bottom-20 right-5 z-40">
+<button class="h-14 px-5 rounded-full bg-secondary-container text-on-secondary shadow-[0_8px_24px_rgba(252,105,89,0.4)] flex items-center gap-2 font-label-lg text-label-lg transition-transform duration-200 active:scale-95 hover:shadow-[0_12px_28px_rgba(252,105,89,0.5)]" id="addVehicleBtn">
+<span class="material-symbols-outlined text-[24px]">add</span>
+<span>Add Vehicle</span>
+</button>
+</div>
+<!-- QR Detail Bottom-Sheet / Modal Overlay -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 flex items-end justify-center hidden opacity-0 transition-opacity duration-300" id="qrModalBackdrop">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-[28px] p-6 shadow-2xl flex flex-col items-center gap-4 transform translate-y-full transition-transform duration-300" id="qrModalPanel">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant/60 cursor-grab mb-1" onclick="closeQrModal()"></div>
+<div class="text-center">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalVehicleName">Honda City ZX</h4>
+<div class="inline-block mt-1.5 px-3 py-1 bg-surface-container-low rounded-lg">
+<span class="font-code-license-plate text-label-lg text-primary font-bold tracking-wider" id="modalPlateNumber">MH 12 AB 1234</span>
+</div>
+</div>
+<!-- High-res QR Display -->
+<div class="p-5 bg-surface-bright rounded-2xl shadow-inner flex flex-col items-center justify-center my-2 border-dashed border-2 border-outline-variant/30">
+<svg class="w-44 h-44 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<rect fill="currentColor" height="30" rx="4" width="30" x="0" y="0"></rect>
+<rect fill="#FAF9F6" height="20" rx="2" width="20" x="5" y="5"></rect>
+<rect fill="#FC6959" height="12" rx="1" width="12" x="9" y="9"></rect>
+<rect fill="currentColor" height="30" rx="4" width="30" x="70" y="0"></rect>
+<rect fill="#FAF9F6" height="20" rx="2" width="20" x="75" y="5"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="79" y="9"></rect>
+<rect fill="currentColor" height="30" rx="4" width="30" x="0" y="70"></rect>
+<rect fill="#FAF9F6" height="20" rx="2" width="20" x="5" y="75"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="9" y="79"></rect>
+<rect fill="currentColor" height="22" rx="2" width="8" x="36" y="4"></rect>
+<rect fill="currentColor" height="8" rx="2" width="12" x="50" y="10"></rect>
+<rect fill="currentColor" height="8" rx="2" width="12" x="12" y="36"></rect>
+<rect fill="#1E2749" height="28" rx="4" width="28" x="36" y="36"></rect>
+<circle cx="50" cy="50" fill="#FAF9F6" r="5"></circle>
+<rect fill="currentColor" height="16" rx="2" width="10" x="70" y="36"></rect>
+<rect fill="currentColor" height="20" rx="2" width="8" x="88" y="40"></rect>
+<rect fill="currentColor" height="26" rx="2" width="10" x="36" y="70"></rect>
+<rect fill="currentColor" height="8" rx="2" width="22" x="52" y="76"></rect>
+<rect fill="currentColor" height="12" rx="2" width="14" x="80" y="70"></rect>
+<rect fill="#FC6959" height="6" rx="2" width="34" x="60" y="90"></rect>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-2 font-medium" id="modalScanCount">8 scans recorded</span>
+</div>
+<!-- Action buttons -->
+<div class="grid grid-cols-2 gap-3 w-full mt-1">
+<button class="h-12 rounded-full bg-surface-container-low text-primary-container font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors" onclick="shareQr()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Share QR</span>
+</button>
+<button class="h-12 rounded-full bg-secondary-container text-on-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(252,105,89,0.3)] hover:opacity-95 transition-opacity" onclick="downloadQr()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</button>
+</div>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-2" onclick="closeQrModal()">
+        Dismiss
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function openQrModal(vehicleName, plateNumber, scansCount) {
+    const backdrop = document.getElementById('qrModalBackdrop');
+    const panel = document.getElementById('qrModalPanel');
+    
+    document.getElementById('modalVehicleName').innerText = vehicleName;
+    document.getElementById('modalPlateNumber').innerText = plateNumber;
+    document.getElementById('modalScanCount').innerText = scansCount;
+
+    backdrop.classList.remove('hidden');
+    // Force reflow
+    void backdrop.offsetWidth;
+    backdrop.classList.remove('opacity-0');
+    backdrop.classList.add('opacity-100');
+
+    panel.classList.remove('translate-y-full');
+    panel.classList.add('translate-y-0');
+  }
+
+  function closeQrModal() {
+    const backdrop = document.getElementById('qrModalBackdrop');
+    const panel = document.getElementById('qrModalPanel');
+
+    panel.classList.remove('translate-y-0');
+    panel.classList.add('translate-y-full');
+
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0');
+
+    setTimeout(() => {
+      backdrop.classList.add('hidden');
+    }, 280);
+  }
+
+  function shareQr() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Car Connect QR Code',
+        text: 'Parking Relay QR for my vehicle. Scan to connect securely.',
+        url: window.location.href
+      }).catch(() => {});
+    } else {
+      alert('Link copied to clipboard for vehicle QR relay.');
+    }
+  }
+
+  function downloadQr() {
+    alert('Generating printable vehicle decal sticker sheet (PDF)...');
+  }
+
+  document.getElementById('addVehicleBtn')?.addEventListener('click', () => {
+    alert('Opening new vehicle registration wizard...');
+  });
+
+  document.getElementById('qrModalBackdrop')?.addEventListener('click', (e) => {
+    if (e.target.id === 'qrModalBackdrop') {
+      closeQrModal();
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-primary-container shadow-[0_-4px_20px_rgba(30,39,73,0.2)]" data-active-classes="text-secondary-container bg-secondary-container/10 font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-xs rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-xs rounded-xl transition-all duration-200 gap-0.5 text-secondary-container bg-secondary-container/10 font-bold" data-path="vehicles" href="#"><span class="material-symbols-outlined text-[24px]">directions_car</span><span class="font-label-sm text-label-sm">Vehicles</span></a><a class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-xs rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5" data-path="history" href="#"><span class="material-symbols-outlined text-[24px]">chat_bubble</span><span class="font-label-sm text-label-sm">History</span></a><a class="flex flex-col items-center justify-center min-w-[3rem] h-12 px-space-xs rounded-xl text-on-primary-container hover:text-on-primary transition-all duration-200 gap-0.5" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

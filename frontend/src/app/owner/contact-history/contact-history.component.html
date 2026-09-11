@@ -1,0 +1,198 @@
+<app-navbar title="Car Connect" subtitle="History"></app-navbar>
+
+<main class="flex-1 flex flex-col relative w-full pt-16 pb-24 px-screen-edge-padding bg-surface max-w-2xl mx-auto">
+  <div class="flex flex-col w-full pb-6 gap-space-lg">
+
+    <!-- Header Section -->
+    <div class="flex flex-col gap-space-2xs mt-space-sm">
+      <div class="flex items-center justify-between">
+        <h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Contact History</h1>
+        @if (unreadCount() > 0) {
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/15 text-secondary-container font-label-sm text-label-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+            {{ unreadCount() }} Action Required
+          </span>
+        }
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Recent notifications and direct pings from parking scans</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+      <button 
+        (click)="setFilter('all')"
+        [ngClass]="activeFilter === 'all' ? 'bg-primary text-on-primary' : 'bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest'"
+        class="px-4 py-2 rounded-full font-label-md text-label-md font-semibold transition-all duration-200 shadow-sm cursor-pointer"
+        type="button"
+      >
+        All ({{ requests().length }})
+      </button>
+
+      <button 
+        (click)="setFilter('unread')"
+        [ngClass]="activeFilter === 'unread' ? 'bg-primary text-on-primary' : 'bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest'"
+        class="px-4 py-2 rounded-full font-label-md text-label-md font-semibold transition-all duration-200 shadow-sm cursor-pointer"
+        type="button"
+      >
+        Unread ({{ unreadCount() }})
+      </button>
+
+      <button 
+        (click)="setFilter('resolved')"
+        [ngClass]="activeFilter === 'resolved' ? 'bg-primary text-on-primary' : 'bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest'"
+        class="px-4 py-2 rounded-full font-label-md text-label-md font-semibold transition-all duration-200 shadow-sm cursor-pointer"
+        type="button"
+      >
+        Resolved ({{ requests().length - unreadCount() }})
+      </button>
+    </div>
+
+    <!-- Messages List -->
+    <div class="flex flex-col gap-space-md">
+      @for (req of filteredRequests(); track req.id) {
+        <div class="bg-surface-container-lowest rounded-2xl p-card-inner-padding shadow-[0_4px_16px_rgba(30,39,73,0.06)] flex flex-col gap-space-sm relative transition-all border border-surface-container-low">
+          
+          <!-- Message Top Header -->
+          <div class="flex items-start justify-between gap-space-sm">
+            <div class="flex items-center gap-space-sm min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[22px]">directions_car</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-label-lg text-label-lg font-bold text-on-surface truncate">
+                  {{ req.vehicleName || 'Honda City' }}
+                </span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface-variant tracking-wider">
+                  {{ req.vehicleNumber || 'MH 12 AB ••••' }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Status Pill & Time -->
+            <div class="flex flex-col items-end gap-1 shrink-0">
+              @if (req.status === 'SENT') {
+                <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-white font-label-sm text-label-sm font-bold tracking-wide shadow-sm flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                  UNREAD
+                </span>
+              } @else if (req.status === 'READ') {
+                <span class="px-2.5 py-0.5 rounded-full bg-on-tertiary-container/15 text-on-tertiary-container font-label-sm text-label-sm font-bold tracking-wide flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">done_all</span>
+                  READ
+                </span>
+              } @else {
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-bold tracking-wide flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">verified</span>
+                  RESOLVED
+                </span>
+              }
+              <span class="font-body-sm text-body-sm text-on-surface-variant">{{ req.createdAt }}</span>
+            </div>
+          </div>
+
+          <!-- Message Body Snippet -->
+          <div class="bg-surface-container-low rounded-xl p-space-sm flex items-start gap-space-xs">
+            <span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5" [ngClass]="req.status === 'SENT' ? 'text-secondary-container' : 'text-on-tertiary-container'">
+              {{ req.status === 'SENT' ? 'report_problem' : 'info' }}
+            </span>
+            <p class="font-body-md text-body-md text-on-surface italic leading-snug">
+              “{{ req.message }}”
+            </p>
+          </div>
+
+          <!-- Unread Action Buttons -->
+          @if (req.status === 'SENT') {
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-xs pt-1">
+              <button 
+                (click)="triggerRelayCall(req.id)"
+                class="h-11 px-space-md rounded-full bg-secondary-container text-white font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(252,105,89,0.35)] active:scale-95 transition-transform cursor-pointer"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[18px]" [ngClass]="{ 'animate-pulse': isCallingId === req.id }">
+                  {{ isCallingId === req.id ? 'ring_volume' : 'phone_in_talk' }}
+                </span>
+                <span>{{ isCallingId === req.id ? 'Connecting Masked Relay...' : 'Call back via Relay' }}</span>
+              </button>
+
+              <button 
+                (click)="toggleQuickReply(req.id)"
+                class="h-11 px-space-md rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform hover:bg-surface-container-high cursor-pointer"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[18px]">reply</span>
+                <span>Quick SMS Reply</span>
+              </button>
+            </div>
+
+            <!-- Expandable Quick Reply Drawer -->
+            @if (expandedReplyId === req.id) {
+              <div class="flex flex-col gap-2 pt-2 border-t border-surface-container animate-in fade-in slide-in-from-top-2">
+                <div class="flex gap-1.5 overflow-x-auto pb-1">
+                  <button 
+                    (click)="populateReply(req.id, 'Moving right away!')"
+                    class="text-left whitespace-nowrap px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm hover:bg-primary hover:text-on-primary transition-colors cursor-pointer"
+                    type="button"
+                  >
+                    “Moving right away!”
+                  </button>
+                  <button 
+                    (click)="populateReply(req.id, 'On my way down, 2 mins.')"
+                    class="text-left whitespace-nowrap px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm hover:bg-primary hover:text-on-primary transition-colors cursor-pointer"
+                    type="button"
+                  >
+                    “On my way down, 2 mins.”
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <input 
+                    [value]="replyInputs[req.id] || ''"
+                    (input)="replyInputs[req.id] = $any($event.target).value"
+                    class="flex-1 h-10 px-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" 
+                    placeholder="Type a secure relayed reply..." 
+                    type="text"
+                  />
+                  <button 
+                    (click)="sendReply(req.id)"
+                    class="h-10 px-4 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 cursor-pointer"
+                    type="button"
+                  >
+                    <span>Send</span>
+                    <span class="material-symbols-outlined text-[16px]">send</span>
+                  </button>
+                </div>
+              </div>
+            }
+          } @else {
+            <!-- Resolved Row -->
+            <div class="flex items-center justify-between text-on-surface-variant pt-1 font-body-sm text-body-sm">
+              <span class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+                Resolved • Handled securely
+              </span>
+              <span class="font-label-sm text-[11px] text-outline">Encrypted Log</span>
+            </div>
+          }
+
+        </div>
+      }
+    </div>
+
+    <!-- Zero Contact Privacy Card -->
+    <div class="bg-surface-container-low rounded-2xl p-card-inner-padding flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm">
+        <div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px]">shield</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-bold text-on-surface">Zero Contact Exposure</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Personal mobile numbers are never revealed to scanner</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-primary-container text-[20px]">info</span>
+    </div>
+
+  </div>
+</main>
+
+<app-bottom-nav></app-bottom-nav>

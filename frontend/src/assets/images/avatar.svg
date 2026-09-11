@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Shirt / Body -->
+  <path d="M110 512C110 460 160 440 210 440H302C352 440 402 460 402 512H110Z" fill="#1E88E5"/>
+  <path d="M210 440C210 480 302 480 302 440H210Z" fill="#F08A5D"/>
+
+  <!-- Neck -->
+  <rect x="210" y="400" width="92" height="60" rx="20" fill="#F4976C"/>
+
+  <!-- Ears -->
+  <circle cx="95" cy="265" r="45" fill="#F4976C"/>
+  <circle cx="417" cy="265" r="45" fill="#F4976C"/>
+
+  <!-- Face Head -->
+  <path d="M120 180C120 140 160 110 256 110C352 110 392 140 392 180V270C392 355 330 420 256 420C182 420 120 355 120 270V180Z" fill="#FED19A"/>
+
+  <!-- Hair (Dark Navy Spiky Hair) -->
+  <path d="M85 160C80 80 140 30 170 65C200 40 260 0 290 40C330 15 375 45 375 75C415 50 435 90 430 160C415 130 380 120 355 140C330 120 280 130 256 120C230 130 180 120 155 140C130 120 95 130 85 160Z" fill="#2B3E50"/>
+  <!-- Front Hair Fringe Shape -->
+  <path d="M120 170C140 180 170 140 210 160C250 140 280 170 310 140C350 160 370 140 392 170V140C392 90 340 50 256 50C172 50 120 90 120 140V170Z" fill="#2B3E50"/>
+
+  <!-- Eyebrows -->
+  <rect x="150" y="195" width="45" height="18" rx="9" fill="#2B3E50"/>
+  <rect x="317" y="195" width="45" height="18" rx="9" fill="#2B3E50"/>
+
+  <!-- Eyes -->
+  <ellipse cx="175" cy="260" rx="26" ry="26" fill="#FFFFFF"/>
+  <ellipse cx="337" cy="260" rx="26" ry="26" fill="#FFFFFF"/>
+  <circle cx="175" cy="260" r="18" fill="#2B3E50"/>
+  <circle cx="337" cy="260" r="18" fill="#2B3E50"/>
+  <!-- Eye Sparkles -->
+  <circle cx="170" cy="254" r="6" fill="#FFFFFF"/>
+  <circle cx="332" cy="254" r="6" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <rect x="238" y="270" width="36" height="18" rx="9" fill="#F08A5D"/>
+
+  <!-- Open Smile Mouth -->
+  <path d="M190 315C190 365 322 365 322 315H190Z" fill="#2B3E50"/>
+  <path d="M220 345C220 380 292 380 292 345C270 330 240 330 220 345Z" fill="#D83A3A"/>
+</svg>
