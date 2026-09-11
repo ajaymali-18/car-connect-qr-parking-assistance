@@ -237,10 +237,10 @@ function LoginPage({ onGoSignup, onSuccess }) {
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length) return;
-    window.location.href = 'http://localhost:8080/api/v1/auth/login';
+    window.location.href = `${import.meta.env.VITE_API_URL}/api/v1/auth/login`;
   };
   const handleGoogle = () => {
-    window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+    window.location.href = `${import.meta.env.VITE_API_URL}/oauth2/authorization/google`;
   };
 
   return (
@@ -368,7 +368,7 @@ function SignupPage({ onGoLogin, onSuccess }) {
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/v1/auth/signup',
+        `${import.meta.env.VITE_API_URL}/api/v1/auth/signup`,
         { name: form.name, email: form.email, password: form.password }
       );
       setLoading(false);
@@ -381,7 +381,7 @@ function SignupPage({ onGoLogin, onSuccess }) {
   };
 
   const handleGoogle = () => {
-    window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+    window.location.href = `${import.meta.env.VITE_API_URL}/oauth2/authorization/google`;
   };
 
   return (
