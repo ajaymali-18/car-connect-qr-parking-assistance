@@ -1,0 +1,9 @@
+target/
+.git
+.gitignore
+.env
+.idea
+*.iml
+frontend/
+stitch_car_connect_parking_assistant/
+*.md
